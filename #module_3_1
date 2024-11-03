@@ -1,0 +1,30 @@
+## Пространство имён  #module_3_1
+def count_calls():
+    global calls
+    calls += 1
+    return(calls)
+def string_info(xstring):
+    global calls
+    count_calls()
+#    string = len(xstring)
+    return(len(xstring), xstring.upper(), xstring.lower())
+def is_contains(string, list_to_search):
+    global calls
+    count_calls()
+    string = string.upper()
+    xcont = False
+    for i in range(len(list_to_search)):
+        xlist_to_search = list_to_search[i]
+        xlist_to_search = xlist_to_search.upper()
+        if string.find(xlist_to_search) != -1:
+            xcont = True
+            break
+#    xcont = string.find(list_to_search) != -1
+    return(xcont)
+calls = 0
+print(string_info('Capybara'))
+print(string_info('Armageddon'))
+print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN']))
+print(is_contains('cycle', ['recycling', 'cyclic']))
+#print(is_contains('Urban', 'urBAN'))
+print(calls)
