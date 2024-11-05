@@ -1,0 +1,15 @@
+###  Произвольное число параметров ##module_3_4
+def single_root_words(root_word, *other_words):
+    global same_words
+    same_words = []
+    root_word = root_word.lower()
+    for i in range(len(other_words)):
+        xother_words = other_words[i]
+        xother_words = xother_words.lower()
+        if xother_words.find(root_word) != -1 or root_word.find(xother_words) != -1:
+            same_words.append(other_words[i])
+#same_words = []
+result1 = single_root_words('rich', 'richiest', 'orichalcum', 'cheers', 'richies')
+print(same_words)
+result2 = single_root_words('Disablement', 'Able', 'Mable', 'Disable', 'Bagel')
+print(same_words)
