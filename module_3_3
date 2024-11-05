@@ -1,0 +1,13 @@
+###  Распаковка позиционных параметров ##module_3_3
+def print_params(a = 1, b = 'строка', c = True):
+    print(a, b, c)
+# не до конца понял закрывать ли последующие 6 строк ### или оставить так?#
+print_params(b = 25)                                                      #
+print_params(c = [1,2,3])                                                 #
+values_list = [3, 'столбец', False]                                       #
+print_params(*values_list)                                                #
+values_dict = {'a':4, 'b':'диагональ', 'c':True}                          #
+print_params(**values_dict)                                               #
+#не до конца понял закрывать ли предыдущие 6 строк  ### или оставить так? #
+values_list_2 = [3.14159 , 'string2']
+print_params(*values_list_2, 42)
