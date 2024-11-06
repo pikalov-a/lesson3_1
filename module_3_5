@@ -1,30 +1,17 @@
 ###  Рекурсия ##module_3_5
 def get_multiplied_digits( number ):
     global result
-#    global last_number  ##для выхода из рекурсии
-#    print (last_number, number)
-#    if last_number == number: #при таком алгоритме нельзя дважды умножать на одно и то же число
-#        return result
-#    last_number=number
     str_number = str(number)
-#    print(str_number)
     first = int(str_number[0])
-#    print(first)
     number = str(int(number))
     result = first * result
-#    print(int(str_number[1]),"------",str_number, result)
-#    return first * get_multiplied_digits(int(str_number[ 1: ]))
-#    print(int(str_number[1]),"------",str_number, result)
     if len(str(number))>3:
-#        print('balbes')
         return first * get_multiplied_digits(int(str_number[1:]))
     else:
-        print('последнее умножение вручную, последний вызов вызывал неустранимую ошибку ')
-#        print(int(str_number[2:]))
-#        print(result)
+#        print('последнее умножение вручную, последний вызов вызывал неустранимую ошибку ')
         result = result * (int(str_number[2:]))
         return result
 last_number = 0
 result = 1
 get_multiplied_digits ( 40203 )
-print('Результат итогового умножения ',result)
+print(result)
