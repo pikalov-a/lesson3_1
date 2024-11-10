@@ -1,0 +1,7 @@
+###  Модули и пакеты ##fake_math for module_4_1
+#def divide(first, second):
+    from math import inf
+    if second == 0:
+        return "Ошибка"
+    else:
+        return first / second
