@@ -1,0 +1,13 @@
+##  Пространство имен ##module_4_2
+def test_function(x):
+    a = 0
+    b = 1
+#    inner_function(4)
+    def inner_function():
+        a = 2
+        b = 3
+        print ('Я в области видимости функции test_function')
+    inner_function()
+##ERROR!!!##NameError: name 'inner_funtion' is not defined
+##inner_function внутрення функция, извне не вызывается
+#inner_funtion(7)
